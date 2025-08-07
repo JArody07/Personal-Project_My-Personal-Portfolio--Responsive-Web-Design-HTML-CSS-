@@ -139,3 +139,37 @@ body {
 #about-me p {
     padding: 1px 10px 1px 10px;
 }
+
+/* FOOTER BEGINNING */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    font-size: 2.4rem;
+    padding: 8px 0;
+}
+
+.social-icons a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+  color: grey;
+  outline: none;
+}
+
+#footer {
+  background-color: #0b0b0b;
+  padding: 16px;
+  margin-top: 32px;
+  text-align: center;
+}
+
+.copyright {
+  color: grey;
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
