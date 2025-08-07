@@ -2,6 +2,8 @@
 
 html {
 	box-sizing: border-box;
+    font-size: 16px;
+    color: #fff;
 }
 
 body {
@@ -18,12 +20,12 @@ body {
     align-items: center;
     height: 40px;
     width: 100%;
-    padding: 16px 32px;
-    border-bottom: 1px solid darkgray;
+    padding: 12px 0px 12px 0px ;
+    border-bottom: 1px solid #fff;
 }
 
 .navbar-logo {
-    height: 40px;
+    height: 15px;
 }
 
 .nav-links {
@@ -55,17 +57,51 @@ body {
 .left-welcometext {
     color: white;
     width: 50%;
-    padding: 0 10px
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-welcometext h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.left-welcometext p {
+    margin-bottom: 1.5rem;
+}
+
+.left-welcometext-name {
+    font-style: oblique;
+}
+
+.contact-button {
+    align-self: center;
+    background-color: #191919;
+    color: darkgray;
+    padding: 6px 24px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: 1px solid #0B0B0B;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover, .contact-button:focus {
+    background-color: #fff;
+    outline: none;
 }
 
 .profile-image {
     width: 50%;
-    border-radius: 50%;
 }
 
 .profile-image img {
     object-fit: cover;
     width: 100%;
+    border-radius: 1.7%;
 }
 
 @media (max-width: 600px) {
@@ -85,4 +121,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* ABOUT ME SECTION BEGINNING */
+
+.about-me-p {
+    text-align: center;
+    padding-bottom: 0px;
+    color: #fff;
+    background-color: #0B0B0B;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-me p {
+    padding: 1px 10px 1px 10px;
 }
