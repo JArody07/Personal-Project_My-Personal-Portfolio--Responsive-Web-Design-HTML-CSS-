@@ -1,3 +1,5 @@
+/* GENERAL CSS BEGINNING */
+
 html {
 	box-sizing: border-box;
 }
@@ -7,26 +9,47 @@ body {
     font-family: sans-serif;
 }
 
-.navbar {
-    background-color: #191919;
+/* NAVBAR BEGINNING */
+
+#navbar {
+    background: #191919;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 40px;
     width: 100%;
-    padding: 8px;
-}
-
-.navbar-text {
-    color: white;
+    padding: 16px 32px;
+    border-bottom: 1px solid darkgray;
 }
 
 .navbar-logo {
-    height: 30px;
+    height: 40px;
 }
 
-.introtext-and-pic {
+.nav-links {
     display: flex;
     align-items: center;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 12px;
+}
+
+.nav-links a:hover {
+    color: grey;
+}
+
+/* INTRO TEXT AND IMAGE BEGINNING */
+
+#introtext-and-pic {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 40px;
 }
 
 .left-welcometext {
@@ -37,6 +60,7 @@ body {
 
 .profile-image {
     width: 50%;
+    border-radius: 50%;
 }
 
 .profile-image img {
@@ -44,7 +68,16 @@ body {
     width: 100%;
 }
 
-.work-and-projects {
+@media (max-width: 600px) {
+    #introtext-and-pic {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* WORK AND PROJECTS BEGINNING */
+
+#work-and-projects {
     color: white;
     background-color: #0B0B0B;
     height: 50px;
