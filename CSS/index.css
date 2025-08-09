@@ -50,36 +50,36 @@ body {
 #introtext-and-pic {
     display: flex;
     align-items: center;
-    gap: 32px;
-    padding: 40px;
+    padding: 120px 120px 120px 120px;
+    border: 3px solid white;
 }
 
 .left-welcometext {
-    color: white;
-    width: 50%;
+    color: #d7d4d4;
+    border: 3px solid white;
+    width: 60%;
     padding: 0 10px;
+    line-height: 1.7;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .left-welcometext h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 7rem;
+    border: 3px solid white;
+    margin: 0px;
+    line-height: 0.9;
 }
 
 .left-welcometext p {
-    margin-bottom: 1.5rem;
-}
-
-.left-welcometext-name {
-    font-style: oblique;
+    border: 3px solid white;
+    margin: 0 0 0.75rem 0;
 }
 
 .contact-button {
-    align-self: center;
     background-color: #191919;
-    color: darkgray;
+    color: #d7d4d4;
     padding: 6px 24px;
     text-decoration: none;
     font-size: 1.2rem;
@@ -87,21 +87,36 @@ body {
     border-radius: 8px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    align-self: center;
+    margin: 0px;
 }
 
 .contact-button:hover, .contact-button:focus {
-    background-color: #fff;
+    background-color: grey;
     outline: none;
 }
 
 .profile-image {
-    width: 50%;
+    width: 100%;
+    max-width: 260px;
+    min-width: 160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 3px solid white;
 }
 
 .profile-image img {
-    object-fit: cover;
     width: 100%;
-    border-radius: 1.7%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.18);
+    position: relative;
+    z-index: 1;
 }
 
 @media (max-width: 600px) {
@@ -145,20 +160,20 @@ body {
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 24px;
-    font-size: 2.4rem;
-    padding: 8px 0;
+    gap: 3.5rem;
+    font-size: 2.1rem;
+    padding: 20px;
 }
 
 .social-icons a {
     color: white;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 .social-icons a:hover,
 .social-icons a:focus {
   color: grey;
-  outline: none;
 }
 
 #footer {
