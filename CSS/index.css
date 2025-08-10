@@ -3,29 +3,35 @@
 html {
 	box-sizing: border-box;
     font-size: 16px;
-    color: #fff;
+    color: #b9b9b9;
 }
 
+*, *::before, *::after {
+    box-sizing: inherit;
+  }  
+
 body {
-    background-color: #191919;
+    background-color: #100c0c;
     font-family: sans-serif;
+    margin: 0;
 }
 
 /* NAVBAR BEGINNING */
 
 #navbar {
-    background: #191919;
+    background: #100c0c;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 40px;
     width: 100%;
-    padding: 12px 0px 12px 0px ;
+    padding: 30px 0px;
     border-bottom: 1px solid #fff;
 }
 
 .navbar-logo {
     height: 15px;
+    padding-left: 90px;
 }
 
 .nav-links {
@@ -37,12 +43,12 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #fff;
+    color: #b9b9b9;
     padding: 8px 12px;
 }
 
 .nav-links a:hover {
-    color: grey;
+    color: #fff;
 }
 
 /* INTRO TEXT AND IMAGE BEGINNING */
@@ -50,13 +56,11 @@ body {
 #introtext-and-pic {
     display: flex;
     align-items: center;
-    padding: 120px 120px 120px 120px;
-    border: 3px solid white;
+    gap: 48px;
+    padding: 120px 90px;
 }
 
 .left-welcometext {
-    color: #d7d4d4;
-    border: 3px solid white;
     width: 60%;
     padding: 0 10px;
     line-height: 1.7;
@@ -67,45 +71,51 @@ body {
 
 .left-welcometext h1 {
     font-size: 7rem;
-    border: 3px solid white;
-    margin: 0px;
+    margin: 0;
     line-height: 0.9;
 }
 
 .left-welcometext p {
-    border: 3px solid white;
     margin: 0 0 0.75rem 0;
 }
 
 .contact-button {
-    background-color: #191919;
-    color: #d7d4d4;
+    background-color: #100c0c;
+    color: #b9b9b9;
     padding: 6px 24px;
     text-decoration: none;
     font-size: 1.2rem;
-    border: 1px solid #0B0B0B;
+    border: 2px solid #373737;
     border-radius: 8px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
     align-self: center;
-    margin: 0px;
+    margin: 0;
+    transition:
+        background-color 1s ease,
+        color 0.5s ease,
+        border 0.5s ease,
+        outline .2s ease;
 }
 
 .contact-button:hover, .contact-button:focus {
-    background-color: grey;
-    outline: none;
+    background-color: #140f0f;
+    color: #fff;
+    border: 2px solid #100c0c;
+    outline: 2px solid #fff;
 }
 
 .profile-image {
     width: 100%;
-    max-width: 260px;
+    max-width: 450px;
     min-width: 160px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    border: 3px solid white;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    border-radius: 50%;
+    overflow: visible;
 }
 
 .profile-image img {
@@ -113,37 +123,56 @@ body {
     height: auto;
     display: block;
     object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.18);
+    box-shadow: 0 4px 16px 0 #191919;
     position: relative;
     z-index: 1;
+    mask-image: radial-gradient(circle, #191919 1%, transparent 65%);
+    -webkit-mask-image: radial-gradient(circle, #191919 1%, transparent 65%);
 }
 
 @media (max-width: 600px) {
     #introtext-and-pic {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        gap: 24px;
+    }
+    .profile-image {
+        margin: 24px auto 0 auto;
+        max-width: 160px;
     }
 }
 
 /* WORK AND PROJECTS BEGINNING */
 
 #work-and-projects {
-    color: white;
     background-color: #0B0B0B;
-    height: 50px;
+    height: auto;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+#work-and-projects h1 {
+    height: auto;
+}
+
+#work-and-projects p {
+    margin: 0 0 0.75rem 0;
+}
+
 /* ABOUT ME SECTION BEGINNING */
 
-.about-me-p {
+#about-me {
+    padding: 1px 90px;
+    line-height: 1.7;
+}
+
+#about-me h1 {
     text-align: center;
     padding-bottom: 0px;
-    color: #fff;
     background-color: #0B0B0B;
     height: 50px;
     display: flex;
@@ -152,7 +181,7 @@ body {
 }
 
 #about-me p {
-    padding: 1px 10px 1px 10px;
+    margin: 0 0 0.75rem 0;
 }
 
 /* FOOTER BEGINNING */
@@ -166,14 +195,14 @@ body {
 }
 
 .social-icons a {
-    color: white;
-    transition: color 0.3s ease;
+    color: #b9b9b9;
+    transition: color 0.5s ease;
     text-decoration: none;
 }
 
 .social-icons a:hover,
 .social-icons a:focus {
-  color: grey;
+  color: #fff;
 }
 
 #footer {
@@ -181,10 +210,10 @@ body {
   padding: 16px;
   margin-top: 32px;
   text-align: center;
+  border-top: 1px solid #d7d4d4;
 }
 
 .copyright {
-  color: grey;
   margin-top: 8px;
   font-size: 0.9rem;
 }
