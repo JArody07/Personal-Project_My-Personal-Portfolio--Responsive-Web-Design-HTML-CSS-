@@ -163,6 +163,56 @@ body {
     margin: 0 0 0.75rem 0;
 }
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 36px;
+}
+
+.project-card {
+    background: #191919;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #0000001f;
+    padding: 24px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.project-card h2 {
+    font-size: 1.35rem;
+    margin: 0 0 10px 0;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 18px;
+}
+
+.see-more {
+    background: #100c0c;
+    color: #b9b9b9;
+    border-radius: 8px;
+    padding: 6px 18px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.see-more:hover, .see-more:focus {
+    background: #fff;
+    color: #191919;
+}
+
 /* ABOUT ME SECTION BEGINNING */
 
 #about-me {
