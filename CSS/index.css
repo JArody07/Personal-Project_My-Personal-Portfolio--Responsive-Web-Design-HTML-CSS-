@@ -4,6 +4,7 @@ html {
 	box-sizing: border-box;
     font-size: 16px;
     color: #b9b9b9;
+    scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -12,7 +13,7 @@ html {
 
 body {
     background-color: #100c0c;
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -20,9 +21,11 @@ body {
 /* NAVBAR BEGINNING */
 
 #navbar {
+    position: sticky; top: 0;
     background: #100c0c;
     width: 100%;
     border-bottom: 1px solid #fff;
+    z-index: 1000;
 }
 
 .navbar-inner {
@@ -38,12 +41,19 @@ body {
 
 .navbar-logo {
     height: 15px;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    color: #b9b9b9;
+    text-decoration: none;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 1.5rem;
     list-style: none;
 }
 
@@ -62,10 +72,10 @@ body {
 #introtext-and-pic {
     display: flex;
     align-items: center;
-    gap: 48px;
+    gap: 3rem;
     padding: 120px 90px;
     max-width: 1500px;
-    margin: 0 auto;
+    margin: 30px auto;
 }
 
 .left-welcometext {
@@ -78,10 +88,12 @@ body {
 }
 
 .left-welcometext h1 {
-    font-size: 7rem;
+    font-size: 8.5rem;
     margin: 10px 0px;
     padding-left: 0px;
     line-height: 0.9;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
 }
 
 .left-welcometext p {
@@ -104,6 +116,25 @@ body {
         color 0.5s ease,
         border 0.5s ease,
         outline .2s ease;
+}
+
+.contact-button,
+.contact-button:link,
+.contact-button:visited,
+.contact-button:active,
+.contact-button:focus {
+  color: #b9b9b9;
+  background-color: #100c0c;
+  border: 2px solid #373737;
+  outline: none;
+}
+
+.contact-button:hover,
+.contact-button:focus-visible {
+  background-color: #140f0f;
+  color: #fff;
+  border: 2px solid #100c0c;
+  outline: 2px solid #fff;
 }
 
 .contact-button:hover, .contact-button:focus {
@@ -179,9 +210,9 @@ body {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    padding: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 20px 100px 70px 100px;
 }
 
 .project-card {
@@ -203,13 +234,17 @@ body {
 }
 
 .project-card h2 {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     margin: 0 0 10px 0;
 }
 
 .project-card p {
-    font-size: 1rem;
+    font-size: 0.85rem;
     margin-bottom: 18px;
+}
+
+.Description-Tools {
+    font-weight: 800;
 }
 
 .see-more {
@@ -225,6 +260,12 @@ body {
 .see-more:hover, .see-more:focus {
     background: #fff;
     color: #191919;
+}
+
+.seemore-button {
+    color: #b9b9b9;
+    text-decoration: none;
+    border: 1px solid #fff;
 }
 
 /* ABOUT ME SECTION BEGINNING */
@@ -250,7 +291,7 @@ body {
 .aboutme-card {
     background: #191919;
     border-radius: 16px;
-    padding: 20px;
+    padding: 30px 80px;
     box-shadow: 0 4px 24px #0000001f;
 }
 
@@ -285,5 +326,5 @@ body {
 
 .copyright {
   margin-top: 8px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
