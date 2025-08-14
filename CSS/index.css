@@ -78,6 +78,22 @@ body {
     margin: 30px auto;
 }
 
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+}
+
 .left-welcometext {
     width: 60%;
     padding: 0 10px;
@@ -107,7 +123,7 @@ body {
     text-decoration: none;
     font-size: 1.2rem;
     border: 2px solid #373737;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: bold;
     align-self: center;
     margin: 25px;
@@ -153,7 +169,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    box-shadow: 0 4px 24px #100c0c;
     border-radius: 50%;
     overflow: visible;
 }
@@ -212,7 +228,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    padding: 20px 100px 70px 100px;
+    padding: 20px 100px 20px 100px;
 }
 
 .project-card {
@@ -225,6 +241,18 @@ body {
     align-items: center;
     text-align: center;
     transition: box-shadow 0.3s;
+}
+
+.hidden-project {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.revealed {
+    animation: fadeIn 0.7s;
 }
 
 .project-card img {
@@ -254,24 +282,47 @@ body {
     padding: 6px 18px;
     text-decoration: none;
     font-size: 1rem;
-    transition: background 0.3s, color 0.3s;
+    transition: 
+        color 0.5s ease,
+        border 0.5s ease,
+        outline .2s ease;
 }
 
-.see-more:hover, .see-more:focus {
-    background: #fff;
-    color: #191919;
+.see-more:hover {
+    color: #fff;
+    border: 0px solid #100c0c;
+    outline: 2px solid #fff;
 }
 
 .seemore-button {
+    background-color: #100c0c;
     color: #b9b9b9;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 2px solid #373737;
+    border-radius: 10px;
+    padding: 6px 20px;
+    margin: 20px;
+    align-items: center;
+    transition: 
+        background-color 1s ease,
+        color 0.5s ease,
+        border 0.5s ease,
+        outline .2s ease;
+}
+
+.seemore-button:hover,
+.seemore-button:focus-visible {
+    background-color: #140f0f;
+    color: #fff;
+    border: 2px solid #100c0c;
+    outline: 2px solid #fff;
 }
 
 /* ABOUT ME SECTION BEGINNING */
 
 #about-me {
-    padding: 1px 90px;
+    padding: 0px 90px;
+    margin: 20px 0px;
     line-height: 1.7;
 }
 
