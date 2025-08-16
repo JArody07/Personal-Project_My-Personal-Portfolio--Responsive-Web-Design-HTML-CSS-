@@ -379,3 +379,70 @@ body {
   margin-top: 8px;
   font-size: 0.85rem;
 }
+
+@media (max-width: 800px) {
+
+    html {
+        font-size: 12px;
+    }
+    body {
+        padding: 0;
+    }
+    .navbar-inner {
+        padding-left: 16px;
+        padding-right: 16px;
+        height: 44px;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+    .navbar-logo {
+        align-items: center;
+    }
+    .nav-links {
+        gap: 0.5rem;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.2rem;
+        margin-top: 10px;
+    }
+    #introtext-and-pic {
+        padding: 30px 10px;
+        margin: 18px 0;
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+    .left-welcometext {
+        width: 100%;
+        padding: 0;
+        align-items: center;
+    }
+    .left-welcometext h1 {
+        font-size: 2.8rem;
+        line-height: 1.1;
+    }
+    .profile-image {
+        max-width: 290px;
+    }
+    #about-me {
+        padding: 0 40px;
+        margin: 10px 0;
+    }
+    .aboutme-card {
+        padding: 16px 8px;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+        padding: 8px 40px 8px 40px;
+        gap: 1rem;
+    }
+    .project-card {
+        padding: 16px 7px;
+    }
+    .social-icons {
+        gap: 1.2rem;
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+}
