@@ -186,24 +186,6 @@ body {
     -webkit-mask-image: radial-gradient(circle, #191919 1%, transparent 65%);
 }
 
-@media (max-width: 1050px) {
-    #introtext-and-pic {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 24px;
-    }
-    .profile-image {
-        order: -1;
-        margin: 24px auto 0 auto;
-        max-width: 350px;
-    }
-    .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 /* WORK AND PROJECTS BEGINNING */
 
 #work-and-projects {
@@ -244,6 +226,10 @@ body {
 }
 
 .hidden-project {
+    display: none;
+}
+
+#show-less-projects {
     display: none;
 }
 
@@ -380,6 +366,103 @@ body {
   font-size: 0.85rem;
 }
 
+@media (max-width: 1300px) {
+    html {
+        font-size: 1rem;
+    }
+    body {
+        padding: 0;
+    }
+    .navbar-inner {
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        height: auto;
+        margin: 0px;
+    }
+    .navbar-logo {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 1rem;
+        padding: 0;
+        list-style: none;
+    }
+    .nav-links li {
+        width: auto;
+        margin: 0;
+    }
+    .nav-links a {
+        width: auto;
+        text-align: center;
+        padding: 12px 0px;
+    }
+    #introtext-and-pic {
+        padding: 0px 10px;
+        margin: 0px;
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+        align-items: center;
+    }
+    .left-welcometext {
+        width: 100%;
+        padding: 0px;
+        align-items: center;
+    }
+    .left-welcometext h1 {
+        font-size: 2.8rem;
+        line-height: 1.1;
+        margin: 0px;
+    }
+    .left-welcometext p {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .profile-image {
+        max-width: 450px;
+        order: -1;
+    }
+    #about-me {
+        padding: 0 40px;
+        margin: 10px auto;
+    }
+    #about-me h1 {
+        margin: 0px auto;
+    }
+    #about-me p {
+        margin: 0px 15px;
+        text-align: center;
+    }
+    .aboutme-card {
+        padding: 16px 8px;
+    }
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 8px 40px 8px 40px;
+    }
+    .project-card {
+        padding: 16px 7px;
+        gap: 1rem;
+    }
+    .social-icons {
+        gap: 3rem;
+        font-size: 2rem;
+        padding: 10px;
+    }
+}
+
 @media (max-width: 800px) {
 
     html {
@@ -432,8 +515,9 @@ body {
         padding: 0px 10px;
         margin: 0px;
         flex-direction: column;
-        gap: 16px;
+        gap: 24px;
         text-align: center;
+        align-items: center;
     }
     .left-welcometext {
         width: 100%;
@@ -443,9 +527,17 @@ body {
     .left-welcometext h1 {
         font-size: 2.8rem;
         line-height: 1.1;
+        margin-top: 0px;
+    }
+    .left-welcometext p {
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
     .profile-image {
-        max-width: 290px;
+        max-width: 350px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        order: -1;
     }
     #about-me {
         padding: 0 40px;
@@ -462,12 +554,14 @@ body {
         padding: 16px 8px;
     }
     .projects-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
         padding: 8px 40px 8px 40px;
-        gap: 1rem;
     }
     .project-card {
         padding: 16px 7px;
+        margin-left: 50px;
+        margin-right: 50px;
     }
     .social-icons {
         gap: 3rem;
